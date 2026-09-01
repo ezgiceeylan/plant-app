@@ -27,7 +27,8 @@ export function WelcomeScreen() {
           Identify more than 3000+ plants and 88% accuracy.
         </Text>
       </View>
-      <Image source={heroImage} style={styles.hero} />
+
+      <Image source={heroImage} style={styles.hero} contentFit="contain" />
 
       <Button
         label="Get Started"

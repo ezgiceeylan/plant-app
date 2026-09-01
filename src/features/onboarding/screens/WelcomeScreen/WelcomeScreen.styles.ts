@@ -10,9 +10,11 @@ export const styles = StyleSheet.create({
   subtitle: {
     lineHeight: 22,
   },
+
   hero: {
     flex: 1,
-    marginBottom: -48,
+    width: '100%',
+    marginBottom: -24,
   },
   button: {
     marginHorizontal: 24,

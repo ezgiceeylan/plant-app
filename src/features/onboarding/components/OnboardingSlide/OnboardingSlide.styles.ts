@@ -45,31 +45,32 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   hero: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    aspectRatio: 375 / 683,
+    flex: 1,
+    width: '100%',
   },
-  heroDevice: {
+  deviceWrap: {
     alignSelf: 'center',
-    width: 261,
+    height: '80%',
     aspectRatio: 261 / 540,
+    maxWidth: '70%',
     marginTop: 'auto',
-    marginBottom: 55,
   },
+  deviceHero: {
+    flex: 1,
+  },
+
   badge: {
     position: 'absolute',
-    top: 32,
-    right: 28,
-    width: 200,
+    width: '59%',
     aspectRatio: 155 / 170,
+    top: '-11%',
+    right: '-12%',
   },
   fade: {
     position: 'absolute',
     left: 0,
     right: 0,
     bottom: 0,
-    height: 220,
+    height: 200,
   },
 });

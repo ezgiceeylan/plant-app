@@ -13,9 +13,16 @@ const brush = require('@/assets/images/onboarding/step-brush.png');
 interface OnboardingSlideProps {
   slide: Slide;
   width: number;
+  bottomInset?: number;
+  fadeHeight?: number;
 }
 
-export function OnboardingSlide({ slide, width }: OnboardingSlideProps) {
+export function OnboardingSlide({
+  slide,
+  width,
+  bottomInset = 0,
+  fadeHeight,
+}: OnboardingSlideProps) {
   const { colors } = useTheme();
   const shadow = slide.titleShadow ? styles.titleShadow : undefined;
   const isDevice = slide.heroLayout === 'device';
@@ -54,24 +61,35 @@ export function OnboardingSlide({ slide, width }: OnboardingSlideProps) {
       ) : null}
 
       <View style={styles.body}>
-        <Image
-          source={slide.hero}
-          style={isDevice ? styles.heroDevice : styles.hero}
-          contentFit="contain"
-          pointerEvents="none"
-        />
-        {slide.badge ? (
+        {isDevice ? (
+          <View style={[styles.deviceWrap, { marginBottom: bottomInset }]}>
+            <Image
+              source={slide.hero}
+              style={styles.deviceHero}
+              contentFit="contain"
+              pointerEvents="none"
+            />
+            {slide.badge ? (
+              <Image
+                source={slide.badge}
+                style={styles.badge}
+                contentFit="contain"
+                pointerEvents="none"
+              />
+            ) : null}
+          </View>
+        ) : (
           <Image
-            source={slide.badge}
-            style={styles.badge}
+            source={slide.hero}
+            style={styles.hero}
             contentFit="contain"
             pointerEvents="none"
           />
-        ) : null}
+        )}
         {slide.fadeBottom ? (
           <LinearGradient
             colors={[`${colors.background.primary}00`, colors.background.primary]}
-            style={styles.fade}
+            style={[styles.fade, { height: fadeHeight }]}
             pointerEvents="none"
           />
         ) : null}

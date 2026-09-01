@@ -15,7 +15,7 @@ import { OnboardingSlide } from '../../components/OnboardingSlide';
 import { PaginationDots } from '../../components/PaginationDots';
 import { ONBOARDING_SLIDES } from './OnboardingStepsScreen.data';
 import type { Slide } from '../../types';
-import { styles } from './OnboardingStepsScreen.styles';
+import { BUTTON_BASELINE, FADE_HEIGHT, styles } from './OnboardingStepsScreen.styles';
 
 export function OnboardingStepsScreen() {
   const router = useRouter();
@@ -43,7 +43,14 @@ export function OnboardingStepsScreen() {
         ref={listRef}
         data={ONBOARDING_SLIDES}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <OnboardingSlide slide={item} width={width} />}
+        renderItem={({ item }) => (
+          <OnboardingSlide
+            slide={item}
+            width={width}
+            bottomInset={BUTTON_BASELINE}
+            fadeHeight={FADE_HEIGHT}
+          />
+        )}
         getItemLayout={(_, index) => ({ length: width, offset: width * index, index })}
         horizontal
         pagingEnabled
