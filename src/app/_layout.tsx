@@ -19,7 +19,10 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
+        <Stack.Screen
+          name="paywall"
+          options={{ presentation: 'fullScreenModal', animation: 'simple_push' }}
+        />
       </Stack>
     </SafeAreaProvider>
   );

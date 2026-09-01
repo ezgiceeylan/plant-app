@@ -13,8 +13,8 @@ import { Container } from '@/components/Container';
 
 import { OnboardingSlide } from '../../components/OnboardingSlide';
 import { PaginationDots } from '../../components/PaginationDots';
-import { ONBOARDING_SLIDES } from './OnboardingStepsScreen.data';
 import type { Slide } from '../../types';
+import { ONBOARDING_SLIDES } from './OnboardingStepsScreen.data';
 import { BUTTON_BASELINE, FADE_HEIGHT, styles } from './OnboardingStepsScreen.styles';
 
 export function OnboardingStepsScreen() {
@@ -38,7 +38,7 @@ export function OnboardingStepsScreen() {
   };
 
   return (
-    <Container padded={false}>
+    <Container padded={false} edges={['bottom']}>
       <FlatList
         ref={listRef}
         data={ONBOARDING_SLIDES}

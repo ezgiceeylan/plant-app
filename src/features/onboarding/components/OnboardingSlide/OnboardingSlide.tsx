@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/Text';
 import { useTheme } from '@/theme';
@@ -24,11 +25,12 @@ export function OnboardingSlide({
   fadeHeight,
 }: OnboardingSlideProps) {
   const { colors } = useTheme();
+  const insets = useSafeAreaInsets();
   const shadow = slide.titleShadow ? styles.titleShadow : undefined;
   const isDevice = slide.heroLayout === 'device';
 
   return (
-    <View style={[styles.slide, { width }]}>
+    <View style={[styles.slide, { width, paddingTop: insets.top }]}>
       <Image
         source={slide.background}
         style={styles.background}
