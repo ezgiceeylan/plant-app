@@ -3,10 +3,12 @@ const palette = {
   green500: '#28AF6E',
   green600: '#1E9A5E',
   ink900: '#13231B',
+  ink70: '#13231BB2',
+  ink25: '#13231B40',
+  moss70: '#597165B2',
   gray50: '#FBFCFE',
   gray100: '#F7F9F8',
   gray200: '#E5E8E6',
-  gray500: '#5A6861',
   red500: '#E5484D',
 } as const;
 
@@ -18,7 +20,9 @@ export const colors = {
   },
   text: {
     primary: palette.ink900,
-    secondary: palette.gray500,
+    secondary: palette.ink70,
+    tertiary: palette.moss70,
+    faint: palette.ink25,
     inverse: palette.white,
     brand: palette.green500,
   },
@@ -46,6 +50,8 @@ export const fonts = {
   rubikLight: 'Rubik-Light',
   rubikRegular: 'Rubik-Regular',
   rubikMedium: 'Rubik-Medium',
+  rubikSemiBold: 'Rubik-SemiBold',
   rubikBold: 'Rubik-Bold',
+  rubikExtraBold: 'Rubik-ExtraBold',
   visbyExtraBold: 'VisbyCF-ExtraBold',
 } as const;

@@ -1,1 +1,1 @@
-export { PaywallScreen } from './components/PaywallScreen';
+export { PaywallScreen } from './screens/PaywallScreen';

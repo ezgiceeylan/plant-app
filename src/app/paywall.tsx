@@ -1,4 +1,4 @@
-import { PaywallScreen } from '@/features/paywall/components/PaywallScreen';
+import { PaywallScreen } from '@/features/paywall';
 
 export default function PaywallRoute() {
   return <PaywallScreen />;

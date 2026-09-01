@@ -1,2 +1,2 @@
-export { WelcomeScreen } from './components/WelcomeScreen';
-export { OnboardingStepsScreen } from './components/OnboardingStepsScreen';
+export { WelcomeScreen } from './screens/WelcomeScreen';
+export { OnboardingStepsScreen } from './screens/OnboardingStepsScreen';

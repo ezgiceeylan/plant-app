@@ -6,8 +6,10 @@ export const fontMap: Record<TextFont, string> = {
   light: fonts.rubikLight,
   regular: fonts.rubikRegular,
   medium: fonts.rubikMedium,
+  semiBold: fonts.rubikSemiBold,
   bold: fonts.rubikBold,
-  extraBold: fonts.visbyExtraBold,
+  extraBold: fonts.rubikExtraBold, // Rubik 800
+  display: fonts.visbyExtraBold, // Visby CF 800
 };
 
 export const sizeMap: Record<TextSize, number> = {
