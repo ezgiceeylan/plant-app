@@ -1,44 +1,59 @@
-import { Image } from 'expo-image';
-import { View } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useRef, useState } from 'react';
+import {
+  FlatList,
+  useWindowDimensions,
+  View,
+  type NativeScrollEvent,
+  type NativeSyntheticEvent,
+} from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { Text } from '@/components/Text';
 
+import { OnboardingSlide } from '../../components/OnboardingSlide';
 import { PaginationDots } from '../../components/PaginationDots';
+import { ONBOARDING_SLIDES } from './OnboardingStepsScreen.data';
+import type { Slide } from '../../types';
 import { styles } from './OnboardingStepsScreen.styles';
 
-const brush = require('@/assets/images/onboarding/step-brush.png');
-const backgroundImage = require('@/assets/images/onboarding/onboarding-step1-background.png');
-const heroImage = require('@/assets/images/onboarding/onboarding-step1-hero.png');
-
 export function OnboardingStepsScreen() {
+  const router = useRouter();
+  const { width } = useWindowDimensions();
+  const listRef = useRef<FlatList<Slide>>(null);
+  const [page, setPage] = useState(0);
+
+  const isLast = page === ONBOARDING_SLIDES.length - 1;
+
+  const onContinue = () => {
+    if (isLast) {
+      router.push('/paywall');
+    } else {
+      listRef.current?.scrollToIndex({ index: page + 1 });
+    }
+  };
+
+  const onScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    setPage(Math.round(e.nativeEvent.contentOffset.x / width));
+  };
+
   return (
-    <Container padded={false} background={backgroundImage}>
-      <View style={styles.title}>
-        <View style={styles.line}>
-          <Text font="medium" size="xxl">
-            Take a photo to{' '}
-          </Text>
-          <View>
-            <Text font="extraBold" size="xxl">
-              identify
-            </Text>
-            <Image source={brush} style={styles.brush} contentFit="contain" />
-          </View>
-        </View>
-        <Text font="medium" size="xxl">
-          the plant!
-        </Text>
-      </View>
+    <Container padded={false}>
+      <FlatList
+        ref={listRef}
+        data={ONBOARDING_SLIDES}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <OnboardingSlide slide={item} width={width} />}
+        getItemLayout={(_, index) => ({ length: width, offset: width * index, index })}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        onMomentumScrollEnd={onScrollEnd}
+      />
 
-      <View style={styles.body}>
-        <Image source={heroImage} style={styles.hero} contentFit="contain" />
-
-        <View style={styles.footer}>
-          <Button label="Continue" />
-          <PaginationDots count={3} activeIndex={0} />
-        </View>
+      <View style={styles.footer}>
+        <Button label="Continue" onPress={onContinue} />
+        <PaginationDots count={3} activeIndex={page} />
       </View>
     </Container>
   );
