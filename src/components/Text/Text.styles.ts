@@ -10,6 +10,9 @@ export const fontMap: Record<TextFont, string> = {
   bold: fonts.rubikBold,
   extraBold: fonts.rubikExtraBold,
   display: fonts.visbyExtraBold,
+  sfProSemibold: fonts.sfProSemibold,
+  sfProBold: fonts.sfProBold,
+  sfProRegular: fonts.sfProRegular,
 };
 
 export const sizeMap: Record<TextSize, number> = {

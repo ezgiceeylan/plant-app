@@ -19,6 +19,11 @@ export const styles = StyleSheet.create({
     marginLeft: 8,
     gap: 2,
   },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
   title: {
     textShadowColor: '#00000052',
     textShadowOffset: { width: 0, height: 2 },

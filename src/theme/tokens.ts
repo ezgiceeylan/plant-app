@@ -54,4 +54,7 @@ export const fonts = {
   rubikBold: 'Rubik-Bold',
   rubikExtraBold: 'Rubik-ExtraBold',
   visbyExtraBold: 'VisbyCF-ExtraBold',
+  sfProSemibold: 'SFProText-Semibold',
+  sfProBold: 'SFProText-Bold',
+  sfProRegular: 'SFProText-Regular',
 } as const;

@@ -14,17 +14,28 @@ export function PremiumBanner() {
       <Image source={leftIcon} style={styles.leftIcon} contentFit="contain" />
 
       <View style={styles.texts}>
+        <View style={styles.titleRow}>
+          <GradientText
+            font="sfProBold"
+            size="md"
+            colors={['#E5C990', '#E4B046']}
+            locations={[0.4935, 1]}
+            style={styles.title}
+          >
+            FREE
+          </GradientText>
+          <GradientText
+            font="sfProSemibold"
+            size="md"
+            colors={['#E5C990', '#E4B046']}
+            locations={[0.4935, 1]}
+            style={styles.title}
+          >
+            Premium Available
+          </GradientText>
+        </View>
         <GradientText
-          font="medium"
-          size="md"
-          colors={['#E5C990', '#E4B046']}
-          locations={[0.4935, 1]}
-          style={styles.title}
-        >
-          FREE Premium Available
-        </GradientText>
-        <GradientText
-          font="regular"
+          font="sfProRegular"
           size="xs"
           colors={['#FFDE9CCC', '#F5C25BCC']}
           locations={[0.4924, 1]}

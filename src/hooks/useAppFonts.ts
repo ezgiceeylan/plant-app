@@ -11,6 +11,9 @@ export function useAppFonts(): boolean {
     [fonts.rubikBold]: require('@/assets/fonts/Rubik-Bold.ttf'),
     [fonts.rubikExtraBold]: require('@/assets/fonts/Rubik-ExtraBold.ttf'),
     [fonts.visbyExtraBold]: require('@/assets/fonts/VisbyCF-ExtraBold.ttf'),
+    [fonts.sfProSemibold]: require('@/assets/fonts/SFProText-Semibold.ttf'),
+    [fonts.sfProBold]: require('@/assets/fonts/SFProText-Bold.ttf'),
+    [fonts.sfProRegular]: require('@/assets/fonts/SFProText-Regular.ttf'),
   });
 
   return loaded || error != null;

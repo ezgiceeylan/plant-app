@@ -16,7 +16,7 @@ export const sizeSpecs: Record<ButtonSize, SizeSpec> = {
   lg: {
     height: 56,
     radius: radius.md,
-    label: { fontFamily: fonts.rubikBold, fontSize: 15 },
+    label: { fontFamily: fonts.sfProBold, fontSize: 15 },
   },
 };
 
