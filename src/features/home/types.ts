@@ -1,12 +1,20 @@
 export interface Article {
-  id: number | string;
+  id: number;
   title: string;
-  imageUri?: string;
-  uri?: string;
+  subtitle: string;
+  image_uri: string;
+  uri: string;
+  order: number;
 }
 
 export interface Category {
-  id: number | string;
+  id: number;
+  name: string;
   title: string;
-  imageUri?: string;
+  rank: number;
+  image: {
+    url: string;
+    width: number;
+    height: number;
+  };
 }
