@@ -7,7 +7,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@/components/Text';
 import { useTheme } from '@/theme';
 
+import { Button } from '@/components/Button';
 import { FeatureCarousel } from '../../components/FeatureCarousel';
+import { PaywallFooter } from '../../components/PaywallFooter';
+import { PlanSelector } from '../../components/PlanSelector';
+import { usePaywall } from '../../hooks/usePaywall';
 import { styles } from './PaywallScreen.styles';
 
 const backgroundImage = require('@/assets/images/paywall/paywall-background.png');
@@ -16,6 +20,7 @@ export function PaywallScreen() {
   const router = useRouter();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
+  const { plans, selectedId, select, subscribe } = usePaywall();
 
   return (
     <View style={[styles.root, { backgroundColor: '#101e17' }]}>
@@ -47,8 +52,11 @@ export function PaywallScreen() {
             Access All Features
           </Text>
         </View>
-
         <FeatureCarousel />
+        <PlanSelector plans={plans} selectedId={selectedId} onSelect={select} />
+        <Button size="sm" label="Try free for 3 days" onPress={subscribe} />
+
+        <PaywallFooter />
       </View>
     </View>
   );

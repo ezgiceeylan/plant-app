@@ -7,7 +7,6 @@ import type { ButtonSize, ButtonVariant } from './Button.types';
 type SizeSpec = { height: number; radius: number; label: TextStyle };
 type VariantSpec = { container: ViewStyle; label: TextStyle };
 
-// Theme-independent — static.
 export const sizeSpecs: Record<ButtonSize, SizeSpec> = {
   sm: {
     height: 52,

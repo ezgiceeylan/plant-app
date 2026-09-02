@@ -28,7 +28,6 @@ export const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     paddingHorizontal: 24,
-    gap: 16,
   },
 
   title: {
@@ -38,25 +37,5 @@ export const styles = StyleSheet.create({
     color: '#FFFFFFB2',
     fontSize: 17,
     lineHeight: 24,
-  },
-  features: {
-    gap: 12,
-  },
-  plans: {
-    gap: 12,
-  },
-  plan: {
-    borderWidth: 1,
-    borderColor: '#FFFFFF33',
-    borderRadius: 14,
-    padding: 16,
-  },
-  fineprint: {
-    textAlign: 'center',
-  },
-  links: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 8,
   },
 });
