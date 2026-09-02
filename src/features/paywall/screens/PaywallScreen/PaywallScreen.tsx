@@ -40,7 +40,7 @@ export function PaywallScreen() {
       >
         <Ionicons name="close" size={16} color={colors.text.inverse} />
       </Pressable>
-      <View style={[styles.content, { paddingBottom: insets.bottom + 16 }]}>
+      <View style={[styles.content, { paddingBottom: insets.bottom + 8 }]}>
         <View>
           <Text font="display" color="inverse" style={styles.title}>
             PlantApp{' '}
@@ -55,7 +55,6 @@ export function PaywallScreen() {
         <FeatureCarousel />
         <PlanSelector plans={plans} selectedId={selectedId} onSelect={select} />
         <Button size="sm" label="Try free for 3 days" onPress={subscribe} />
-
         <PaywallFooter />
       </View>
     </View>
