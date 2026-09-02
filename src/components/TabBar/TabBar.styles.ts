@@ -2,15 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   bar: {
-    paddingTop: 6,
-  },
-  blur: {
     position: 'absolute',
-    top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: '#FFFFFFEB',
+    paddingTop: 6,
+    borderWidth: 0.5,
+    borderColor: '#13231B1A',
   },
   row: {
     flexDirection: 'row',

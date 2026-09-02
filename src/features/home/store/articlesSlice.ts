@@ -10,7 +10,6 @@ export const fetchArticles = createAsyncThunk<Article[], void, { state: RootStat
   'articles/fetch',
   getQuestions,
   {
-    // skip if a request is already in flight
     condition: (_arg, { getState }) => getState().articles.status !== 'loading',
   }
 );

@@ -33,8 +33,14 @@ export function PlanOption({ plan, selected, onPress }: PlanOptionProps) {
         <Text font="medium" size="md" color="inverse">
           {plan.title}
         </Text>
-        <Text font="light" size="sm" style={styles.subtitle}>
+        <Text font={selected ? 'regular' : 'light'} size="sm" style={styles.subtitle}>
           {plan.priceLabel}
+          {plan.priceNote ? (
+            <Text font="regular" size="sm" style={styles.subtitle}>
+              {' '}
+              {plan.priceNote}
+            </Text>
+          ) : null}
         </Text>
       </View>
 

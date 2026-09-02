@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@/components/Text';
 
 import { SearchBar } from '../SearchBar';
+import { getGreeting } from './greeting';
 import { HEADER_BODY, styles } from './HomeHeader.styles';
 
 const background = require('@/assets/images/home/background.png');
@@ -12,6 +13,7 @@ const background = require('@/assets/images/home/background.png');
 export function HomeHeader() {
   const insets = useSafeAreaInsets();
   const bandHeight = insets.top + HEADER_BODY;
+  const greeting = getGreeting();
 
   return (
     <View>
@@ -29,7 +31,7 @@ export function HomeHeader() {
             Hi, plant lover!
           </Text>
           <Text font="medium" size="xl" color="primary" style={styles.salutation}>
-            Good Afternoon! ⛅
+            {greeting}
           </Text>
         </View>
 

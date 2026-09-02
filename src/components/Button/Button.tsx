@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { ActivityIndicator, Text, TouchableOpacity } from 'react-native';
 
 import { useTheme } from '@/theme';
@@ -17,7 +16,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const { colors } = useTheme();
-  const variantSpec = useMemo(() => getVariantSpecs(colors)[variant], [colors, variant]);
+  const variantSpec = getVariantSpecs(colors)[variant];
   const sizeSpec = sizeSpecs[size];
   const isDisabled = disabled || loading;
 

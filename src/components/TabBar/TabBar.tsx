@@ -1,4 +1,3 @@
-import { BlurView } from 'expo-blur';
 import { Image } from 'expo-image';
 import { Fragment } from 'react';
 import { Pressable, View } from 'react-native';
@@ -24,9 +23,12 @@ export function TabBar({ state, descriptors, navigation, insets }: TabBarProps) 
   const { colors } = useTheme();
 
   return (
-    <View style={[styles.bar, { paddingBottom: insets.bottom + 8 }]}>
-      <BlurView intensity={45} tint="light" style={styles.blur} pointerEvents="none" />
-
+    <View
+      style={[
+        styles.bar,
+        { backgroundColor: colors.background.primary, paddingBottom: insets.bottom + 8 },
+      ]}
+    >
       <View style={styles.row}>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];

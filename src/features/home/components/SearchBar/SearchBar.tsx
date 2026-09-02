@@ -1,7 +1,9 @@
-import { TextInput, View, ViewProps } from 'react-native';
-
 import { Image } from 'expo-image';
+import { TextInput, View, type ViewProps } from 'react-native';
+
 import { styles } from './SearchBar.styles';
+
+const searchIcon = require('@/assets/images/home/search-outline.png');
 
 interface SearchBarProps {
   value?: string;
@@ -18,12 +20,12 @@ export function SearchBar({
 }: SearchBarProps) {
   return (
     <View style={[styles.bar, style]}>
-      <Image source={require('@/assets/images/home/search-outline.png')} style={styles.leftIcon} />
+      <Image source={searchIcon} style={styles.leftIcon} />
       <TextInput
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor={'#AFAFAF'}
+        placeholderTextColor="#AFAFAF"
         style={styles.input}
       />
     </View>

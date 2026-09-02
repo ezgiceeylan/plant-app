@@ -1,13 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { useRouter } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { Button } from '@/components/Button';
 import { Text } from '@/components/Text';
 import { useTheme } from '@/theme';
 
-import { Button } from '@/components/Button';
 import { FeatureCarousel } from '../../components/FeatureCarousel';
 import { PaywallFooter } from '../../components/PaywallFooter';
 import { PlanSelector } from '../../components/PlanSelector';
@@ -17,10 +16,9 @@ import { styles } from './PaywallScreen.styles';
 const backgroundImage = require('@/assets/images/paywall/paywall-background.png');
 
 export function PaywallScreen() {
-  const router = useRouter();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
-  const { plans, selectedId, select, subscribe } = usePaywall();
+  const { plans, selectedId, select, subscribe, dismiss } = usePaywall();
 
   return (
     <View style={[styles.root, { backgroundColor: '#101e17' }]}>
@@ -32,7 +30,7 @@ export function PaywallScreen() {
       />
 
       <Pressable
-        onPress={() => router.back()}
+        onPress={dismiss}
         accessibilityRole="button"
         accessibilityLabel="Close"
         hitSlop={16}

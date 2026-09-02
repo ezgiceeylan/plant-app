@@ -1,5 +1,10 @@
 import { Redirect } from 'expo-router';
 
+import { selectOnboardingCompleted } from '@/features/onboarding/store/onboardingSlice';
+import { useAppSelector } from '@/store/hooks';
+
 export default function Index() {
-  return <Redirect href="/(onboarding)" />;
+  const onboardingCompleted = useAppSelector(selectOnboardingCompleted);
+
+  return <Redirect href={onboardingCompleted ? '/(tabs)' : '/(onboarding)'} />;
 }

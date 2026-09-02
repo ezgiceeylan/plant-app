@@ -4,7 +4,8 @@ export const SUBSCRIPTION_PLANS: Plan[] = [
   {
     id: 'monthly',
     title: '1 Month',
-    priceLabel: '$2.99/month, auto renewable',
+    priceLabel: '$2.99/month,',
+    priceNote: 'auto renewable',
   },
   {
     id: 'yearly',
@@ -15,6 +16,3 @@ export const SUBSCRIPTION_PLANS: Plan[] = [
 ];
 
 export const DEFAULT_PLAN_ID = 'yearly';
-
-export const PAYWALL_NOTE =
-  'After the 3-day free trial period you will be charged $529.99 per year unless you cancel before the trial ends. Yearly subscription is auto-renewable.';

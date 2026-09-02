@@ -19,7 +19,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
       accessibilityLabel={article.title}
       onPress={() => WebBrowser.openBrowserAsync(article.uri)}
     >
-      <Image source={article.image_uri} style={styles.image} contentFit="contain" />
+      <Image source={article.image_uri} style={styles.image} contentFit="cover" />
       <Text font="regular" size="md" color="inverse" numberOfLines={2} style={styles.title}>
         {article.title}
       </Text>

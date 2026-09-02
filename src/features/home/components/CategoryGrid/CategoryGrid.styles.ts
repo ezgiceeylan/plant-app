@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     flexWrap: 'wrap',
     gap: 11,
   },
-  // keeps a lone last card at half width instead of stretching across the row
   filler: {
     flexGrow: 1,
     flexBasis: '45%',
