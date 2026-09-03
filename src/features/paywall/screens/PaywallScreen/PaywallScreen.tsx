@@ -18,7 +18,7 @@ const backgroundImage = require('@/assets/images/paywall/paywall-background.png'
 export function PaywallScreen() {
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
-  const { plans, selectedId, select, subscribe, dismiss } = usePaywall();
+  const { plans, selectedId, select, complete } = usePaywall();
 
   return (
     <View style={[styles.root, { backgroundColor: palette.forest900 }]}>
@@ -30,7 +30,7 @@ export function PaywallScreen() {
       />
 
       <Pressable
-        onPress={dismiss}
+        onPress={complete}
         accessibilityRole="button"
         accessibilityLabel="Close"
         hitSlop={16}
@@ -52,7 +52,7 @@ export function PaywallScreen() {
         </View>
         <FeatureCarousel />
         <PlanSelector plans={plans} selectedId={selectedId} onSelect={select} />
-        <Button size="sm" label="Try free for 3 days" onPress={subscribe} />
+        <Button size="sm" label="Try free for 3 days" onPress={complete} />
         <PaywallFooter />
       </View>
     </View>

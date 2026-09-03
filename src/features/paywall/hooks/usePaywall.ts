@@ -11,7 +11,7 @@ export function usePaywall() {
   const dispatch = useAppDispatch();
   const [selectedId, setSelectedId] = useState(DEFAULT_PLAN_ID);
 
-  const finishOnboarding = useCallback(() => {
+  const complete = useCallback(() => {
     dispatch(completeOnboarding());
     router.replace('/(tabs)');
   }, [dispatch, router]);
@@ -20,7 +20,6 @@ export function usePaywall() {
     plans: SUBSCRIPTION_PLANS,
     selectedId,
     select: setSelectedId,
-    subscribe: finishOnboarding,
-    dismiss: finishOnboarding,
+    complete,
   };
 }
