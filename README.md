@@ -2,6 +2,11 @@
 
 An [Expo](https://expo.dev) app (SDK 57) using [Expo Router](https://docs.expo.dev/router/introduction) with file-based routing.
 
+## Screens
+
+![PlantApp — Onboarding & Home](docs/screenshots/case-study.png)
+
+
 ## Get started
 
 1. Install dependencies
