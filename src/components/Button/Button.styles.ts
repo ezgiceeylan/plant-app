@@ -1,6 +1,6 @@
 import { StyleSheet, type TextStyle, type ViewStyle } from 'react-native';
 
-import { fonts, radius, type Theme } from '@/theme';
+import { fonts, type Theme } from '@/theme';
 
 import type { ButtonSize, ButtonVariant } from './Button.types';
 
@@ -10,12 +10,12 @@ type VariantSpec = { container: ViewStyle; label: TextStyle };
 export const sizeSpecs: Record<ButtonSize, SizeSpec> = {
   sm: {
     height: 52,
-    radius: radius.lg,
+    radius: 14,
     label: { fontFamily: fonts.rubikMedium, fontSize: 16 },
   },
   lg: {
     height: 56,
-    radius: radius.md,
+    radius: 12,
     label: { fontFamily: fonts.sfProBold, fontSize: 15 },
   },
 };

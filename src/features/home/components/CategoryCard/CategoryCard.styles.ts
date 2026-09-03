@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   card: {
     flexGrow: 1,
@@ -8,7 +10,7 @@ export const styles = StyleSheet.create({
     padding: 16,
     height: 152,
     borderWidth: 0.5,
-    borderColor: '#3C3C431A',
+    borderColor: palette.systemGray10,
     overflow: 'hidden',
   },
   background: {

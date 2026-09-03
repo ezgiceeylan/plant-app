@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   bar: {
     position: 'absolute',
@@ -8,7 +10,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
     paddingTop: 6,
     borderWidth: 0.5,
-    borderColor: '#13231B1A',
+    borderColor: palette.ink10,
   },
   row: {
     flexDirection: 'row',

@@ -1,6 +1,6 @@
-import { colors, fonts, radius, spacing } from './tokens';
+import { colors, fonts } from './tokens';
 
-const theme = { colors, spacing, radius, fonts } as const;
+const theme = { colors, fonts } as const;
 
 export type Theme = typeof theme;
 

@@ -2,6 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Pressable, View } from 'react-native';
 
 import { Text } from '@/components/Text';
+import { palette } from '@/theme';
 
 import { styles } from './PlanOption.styles';
 import type { PlanOptionProps } from './PlanOption.types';
@@ -16,7 +17,7 @@ export function PlanOption({ plan, selected, onPress }: PlanOptionProps) {
     >
       {selected ? (
         <LinearGradient
-          colors={['#28AF6E2B', '#28AF6E00']}
+          colors={[palette.green500Fade, palette.green500Clear]}
           locations={[0, 0.6851]}
           start={{ x: 1, y: 1 }}
           end={{ x: 0, y: 1 }}

@@ -1,6 +1,8 @@
 import { Image } from 'expo-image';
 import { TextInput, View, type ViewProps } from 'react-native';
 
+import { palette } from '@/theme';
+
 import { styles } from './SearchBar.styles';
 
 const searchIcon = require('@/assets/images/home/search-outline.png');
@@ -25,7 +27,7 @@ export function SearchBar({
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor="#AFAFAF"
+        placeholderTextColor={palette.gray400}
         style={styles.input}
       />
     </View>

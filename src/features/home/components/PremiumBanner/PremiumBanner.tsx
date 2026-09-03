@@ -2,6 +2,7 @@ import { Image } from 'expo-image';
 import { View } from 'react-native';
 
 import { GradientText } from '@/components/GradientText';
+import { palette } from '@/theme';
 
 import { styles } from './PremiumBanner.styles';
 
@@ -18,7 +19,7 @@ export function PremiumBanner() {
           <GradientText
             font="sfProBold"
             size="md"
-            colors={['#E5C990', '#E4B046']}
+            colors={[palette.goldLight, palette.goldDeep]}
             locations={[0.4935, 1]}
             style={styles.title}
           >
@@ -27,7 +28,7 @@ export function PremiumBanner() {
           <GradientText
             font="sfProSemibold"
             size="md"
-            colors={['#E5C990', '#E4B046']}
+            colors={[palette.goldLight, palette.goldDeep]}
             locations={[0.4935, 1]}
             style={styles.title}
           >
@@ -37,7 +38,7 @@ export function PremiumBanner() {
         <GradientText
           font="sfProRegular"
           size="xs"
-          colors={['#FFDE9CCC', '#F5C25BCC']}
+          colors={[palette.goldPale, palette.goldAmber]}
           locations={[0.4924, 1]}
           start={{ x: 1, y: 0 }}
           end={{ x: 0, y: 0 }}

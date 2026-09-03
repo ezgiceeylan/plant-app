@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/Button';
 import { Text } from '@/components/Text';
-import { useTheme } from '@/theme';
+import { palette, useTheme } from '@/theme';
 
 import { FeatureCarousel } from '../../components/FeatureCarousel';
 import { PaywallFooter } from '../../components/PaywallFooter';
@@ -21,7 +21,7 @@ export function PaywallScreen() {
   const { plans, selectedId, select, subscribe, dismiss } = usePaywall();
 
   return (
-    <View style={[styles.root, { backgroundColor: '#101e17' }]}>
+    <View style={[styles.root, { backgroundColor: palette.forest900 }]}>
       <Image
         source={backgroundImage}
         style={styles.background}

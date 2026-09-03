@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   card: {
     width: 156,
     padding: 16,
     borderRadius: 14,
     gap: 6,
-    backgroundColor: '#23302a',
+    backgroundColor: palette.forest800,
     height: 130,
   },
   iconWrap: {
@@ -23,6 +25,6 @@ export const styles = StyleSheet.create({
     height: 36,
   },
   subtitle: {
-    color: '#FFFFFFB2',
+    color: palette.white70,
   },
 });

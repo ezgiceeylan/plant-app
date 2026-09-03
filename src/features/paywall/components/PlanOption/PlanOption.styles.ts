@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
@@ -9,11 +11,11 @@ export const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 0.5,
     paddingLeft: 16,
-    borderColor: '#FFFFFF4D',
-    backgroundColor: '#FFFFFF0D',
+    borderColor: palette.white30,
+    backgroundColor: palette.white05,
   },
   cardSelected: {
-    borderColor: '#28AF6E',
+    borderColor: palette.green500,
     borderWidth: 1.5,
   },
   gradient: {
@@ -28,25 +30,25 @@ export const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 24,
-    backgroundColor: '#FFFFFF26',
+    backgroundColor: palette.white15,
     alignItems: 'center',
     justifyContent: 'center',
   },
   radioSelected: {
-    backgroundColor: '#28AF6E',
+    backgroundColor: palette.green500,
   },
   radioDot: {
     width: 8,
     height: 8,
     borderRadius: 8,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: palette.white,
   },
   texts: {
     flex: 1,
     gap: 2,
   },
   subtitle: {
-    color: '#FFFFFFB2',
+    color: palette.white70,
     fontSize: 12,
   },
   badgeContainer: {
@@ -62,7 +64,7 @@ export const styles = StyleSheet.create({
     right: 0,
     borderTopRightRadius: 14,
     borderBottomLeftRadius: 20,
-    backgroundColor: '#28AF6E',
+    backgroundColor: palette.green500,
   },
   badgeSelected: {
     top: -1,

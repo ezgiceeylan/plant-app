@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   slide: {
     flex: 1,
@@ -29,7 +31,7 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   titleShadow: {
-    textShadowColor: '#00000040',
+    textShadowColor: palette.black25,
     textShadowOffset: { width: 0, height: 4 },
     textShadowRadius: 4,
   },

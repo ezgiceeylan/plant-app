@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { fonts } from '@/theme';
+import { fonts, palette } from '@/theme';
 
 export const styles = StyleSheet.create({
   bar: {
@@ -10,9 +10,9 @@ export const styles = StyleSheet.create({
     height: 44,
     paddingHorizontal: 16,
     borderRadius: 12,
-    backgroundColor: '#FFFFFFE0',
+    backgroundColor: palette.white88,
     borderWidth: 0.2,
-    borderColor: '#3C3C4340',
+    borderColor: palette.systemGray25,
   },
   input: {
     flex: 1,

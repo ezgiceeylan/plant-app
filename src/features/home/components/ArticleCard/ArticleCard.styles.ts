@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   card: {
     width: 240,
@@ -7,7 +9,7 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
     justifyContent: 'flex-end',
-    borderColor: '#FFFFFF1A',
+    borderColor: palette.white10,
     borderWidth: 1,
   },
   image: {

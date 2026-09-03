@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     alignItems: 'center',
     height: 64,
     borderRadius: 12,
-    backgroundColor: '#24201A',
+    backgroundColor: palette.bark800,
   },
   leftIcon: {
     marginLeft: 14,
@@ -25,7 +27,7 @@ export const styles = StyleSheet.create({
     gap: 4,
   },
   title: {
-    textShadowColor: '#00000052',
+    textShadowColor: palette.black32,
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
   },

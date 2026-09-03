@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Pressable, View } from 'react-native';
 
 import { Text } from '@/components/Text';
-import { useTheme } from '@/theme';
+import { palette, useTheme } from '@/theme';
 
 import { styles } from './TabBar.styles';
 import type { TabBarProps } from './TabBar.types';
@@ -34,7 +34,7 @@ export function TabBar({ state, descriptors, navigation, insets }: TabBarProps) 
           const { options } = descriptors[route.key];
 
           const isFocused = state.index === index;
-          const color = isFocused ? colors.brand.default : '#979798';
+          const color = isFocused ? colors.brand.default : palette.gray500;
           const icon = TAB_ICON[route.name];
 
           const onPress = () => {

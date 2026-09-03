@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   footer: {
     gap: 10,
     marginTop: 8,
   },
   note: {
-    color: '#FFFFFF85',
+    color: palette.white52,
     textAlign: 'center',
     fontSize: 9,
   },
@@ -15,6 +17,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   link: {
-    color: '#FFFFFF80',
+    color: palette.white50,
   },
 });

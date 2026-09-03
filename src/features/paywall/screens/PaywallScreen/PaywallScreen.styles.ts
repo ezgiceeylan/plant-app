@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { palette } from '@/theme';
+
 export const styles = StyleSheet.create({
   root: {
     flex: 1,
@@ -19,7 +21,7 @@ export const styles = StyleSheet.create({
     height: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#00000066',
+    backgroundColor: palette.black40,
     borderRadius: 15,
   },
   content: {
@@ -34,7 +36,7 @@ export const styles = StyleSheet.create({
     fontSize: 30,
   },
   subtitle: {
-    color: '#FFFFFFB2',
+    color: palette.white70,
     fontSize: 17,
     lineHeight: 24,
   },
